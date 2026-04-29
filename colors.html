@@ -3,7 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formating</title>
+    <link rel="stylesheet" href="style.css"><!--IN this method we make a seperate file for styling then link it here with the html file-->
+    <style>
+        body {
+            background-color: aqua;
+            color: #ffff
+
+        }
+    </style><!--Here we directly use the style element inside the head element-->
+    <!--The css also depends when it is injected as the second one can overwrite the previous one-->
+    <title>Colors</title>
 </head>
 <body>
     <h1>Formatting</h1>
@@ -29,8 +38,26 @@
     </ul>
 
     <h3 style="text-align:center;
-    background-color: #43a322"
+    background-color: #2e8411;
+    color: black"
     >This tag needs some styling</h3><!--global attribute: style attribute is used for basic styling-->
-    
+
+    <p>
+        <blockquote cite="Elon">
+            This my quote
+        </blockquote cite="Elon"><!--The blockquote element represents content that is quoted from another source and the cite attribute include the URL of the quoted information-->
+
+        <q>
+            This is a quote
+        </q><!--It automatically puts quotes on the info-->
+
+        <abbr title="Hyper text markup language">html</abbr><!--The <abbr> contains abbrevation and the title attribute can use for expansion of abbrevation-->
+
+        <address>What to do?</address><!--The <address> element indicates that the enclosed provides contact information for a person or people, or for an organization-->
+        <cite></cite><!--To include a refrence to the source of quoted material the <cite> elements are used-->
+
+        <bdo dir="rtl">It's me ayan</bdo>
+    </p>
+
 </body>
 </html>

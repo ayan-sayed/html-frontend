@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image tag</title>
+    <style>
+        body {
+            background-color: #414141;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://images.pexels.com/photos/10020710/pexels-photo-10020710.jpeg" 
+    width="100px" alt="No Image!"><!--the alt attribute is used as a alternative of image in case the image can't be displayed-->
+    <p>Global</p>
+
+    <!--Duplicate shortcut: copy + shift + alt + down arrow-->
+    <img src="https://images.pexels.com/photos/10020710/pexels-photo-10020710.jpeg" 
+    width="100px" alt="No Image!">
+    <p>Duplicate</p>
+
+    <!--Uploading image from local resourse-->
+    <img src="./html-first.jpeg" width="100px" alt="No Image!">
+    <p>local</p>
+
+
+    <picture><!--The <picture> tag lets chose different version of an image(different sizes or formats)based on user's screen or browser.-->
+        <source media="(min-width: 650px)" srcset="./large.jpeg"/><!--if the condition mets then this image displays-->
+        <img src="./html-first.jpeg" width="100px" alt="no image!"><!--Else this  image get displays -->
+    </picture>
+
+    <p>mapping</p><!--The image <map>is a single image with multiple clickable sections that each link to different destinations-->
+    <!-- An image map generater -->
+    <img src="./mapping.jpg" usemap="#image-map">
+    <map name="image-map">
+    <area onclick="one()" target="" alt="" title="" href="#" coords="192,118,109,0" shape="rect"></area>
+    <area onclick="two()" target="" alt="" title="" href="#" coords="30,118,271,167" shape="rect"></area>
+    </map>
+    <!-- The above code includes javascript which we will learn later. So, for now no need to focus much on the above-->
+
+    <script>
+        function one(){
+            alert("You clicked on one")
+        }
+        function two(){
+            alert("You clicked on two")
+        }
+    </script>
+    
+</body>
+</html>
